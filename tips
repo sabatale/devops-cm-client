@@ -2,4 +2,11 @@ Command examples:
 
 docker run --rm ppiper/cm-client cmclient --endpoint "https://host:port" --password 'xxx' --backend-type CTS --user "xxx" create-transport -tt "K" -d "test" -ts "XS0"
 
+docker run --rm ppiper/cm-client cmclient --endpoint "https://host:port/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV" --password 'xxx' --backend-type SOLMAN --user "xxx" is-transpor
+t-modifiable -tID xxx -cID xxx
+
 docker run --rm ppiper/cm-client cmclient --backend-type CTS create-transport -h
+
+--Important-
+
+Do not forget to add "/sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV" for the SAP Solution Manager endpoint!
