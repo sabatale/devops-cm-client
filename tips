@@ -1,0 +1,5 @@
+Command examples:
+
+docker run --rm ppiper/cm-client cmclient --endpoint "https://host:port" --password 'xxx' --backend-type CTS --user "xxx" create-transport -tt "K" -d "test" -ts "XS0"
+
+docker run --rm ppiper/cm-client cmclient --backend-type CTS create-transport -h
