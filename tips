@@ -7,9 +7,49 @@ t-modifiable -tID xxx -cID xxx
 
 docker run --rm ppiper/cm-client cmclient --backend-type CTS create-transport -h
 
---Important-
+--Important--
 
 SAP Solution Manager endpoint: /sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV
 CTS endpoint: /sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV
 
+--
 
+All Transports need to have the parameter SAP_SCTS_CLOUD with value "X" to show
+Format to JSON: Add ?$format=json (or &)
+
+Get all Transports info: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/Transports / no body
+
+Get Transport info: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/Transports('NPLK900006') / no body
+
+Update Transport info: (PATCH) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/Transports('NPLK900006') / {"Description: "..."}
+
+Create Transport of Copy from TR: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/CopyTransport?id='NPLK900004' / no body
+
+Release Transport: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/ExportTransport?id='NPLK900004' / no body
+
+Import Transport: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/ImportTransport?system='NPL'&id='NPLK900004' / no body
+
+--Generic JSON body--
+
+{
+  "Id": "ABCK123456",
+  "Type": "K",
+  "Status": "D",
+  "TarSystem": "PRD",
+  "Owner": "MILLER",
+  "Date": "/Date(1492098664000)/",
+  "Time": "PT15H51M04S",
+  "RequestRef": "ABCK123456",
+  "Description": "This is a transport",
+  "Cloud": "X",
+  "File": {
+    "results": [
+      {
+        "TransportId": "string",
+        "FileID": "string",
+        "Mimetype": "string",
+        "Content": "string"
+      }
+    ]
+  }
+}
