@@ -12,6 +12,8 @@ docker run --rm ppiper/cm-client cmclient --backend-type CTS create-transport -h
 SAP Solution Manager endpoint: /sap/opu/odata/SAP/AI_CRM_GW_CM_CI_SRV
 CTS endpoint: /sap/opu/odata/SAP/SCTS_CLOUD_API_ODATA_SRV
 
+API Sandbox: https://api.sap.com/api/API_TRANSPORT_MANAGEMENT/
+
 --
 
 All Transports need to have the parameter SAP_SCTS_CLOUD with value "X" to show
