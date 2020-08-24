@@ -32,10 +32,10 @@ Release Transport: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/ExportTrans
 Import Transport: (GET) /sap/opu/odata/sap/SCTS_CLOUD_API_ODATA_SRV/ImportTransport?system='NPL'&id='NPLK900004' / no body
 
 --Transport Types--
-K Workbench
+K Customizing
 C Relocation
 T Transport of Copy
-W Customizing
+W Workbench
 
 --Generic JSON body--
 
